@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>RRHH CP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-light bg-info">
+    <div class="navbar-brand" style="color: white !important; font-size: 2em;
+     font-family: 'Comic Sans MS'; font-weight: bold; text-align: center; width: 100%"
+    >CONSTRUCTORA PINTO ltda.</div>
+    <a class="navbar-brand"  href="#"></a>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>Agregar trabajadores a la base de datos en RRHH</h2>
+            <p>La función principal de esta web, es mantener los datos de
+                nuestros trabajadores al día, de una manera fácil y cómoda
+                para los colaboradores que realizan esta función en RRHH</p>
+        </div>
+    </div>
+    <div class="row" id="userList">
+        <!-- Aquí se agregarán los usuarios -->
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h2>Registro de colaboradores</h2>
+            <form id="userForm">
+                <div class="form-group">
+                    <label for="firstName">Nombre</label>
+                    <input type="text" class="form-control" id="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Apellido</label>
+                    <input type="text" class="form-control" id="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="birthDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="position">Cargo</label>
+                    <select class="form-control" id="position" required>
+                        <option value="">Seleccione...</option>
+                        <option value="Jornal">Jornal</option>
+                        <option value="Obrero">Obrero</option>
+                        <option value="Maestro Primera Electrico">Maestro Primera Electrico</option>
+                        <option value="Maestro Segunda Electrico">Maestro Segunda Electrico</option>
+                        <option value="Capataz">Capataz</option>
+                        <option value="Supervisor">Supervisor</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="entryDate">Fecha de Ingreso</label>
+                    <input type="date" class="form-control" id="entryDate" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Agregar</button>
+                <button type="button" class="btn btn-secondary bg-primary text-white"
+                        id="resetButton">Limpiar</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmModalLabel">Confirmar Registro</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Aquí se mostrarán los datos a confirmar -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="confirmButton">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
